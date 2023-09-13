@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5845869374993136800}
   - component: {fileID: -6653710409232658813}
   - component: {fileID: -8860305578969490833}
+  - component: {fileID: -1190777690192949984}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Respawn
@@ -146,3 +147,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1190777690192949984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8723320244039241301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203fa30294852e4449420fbba6f7ba9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 263994663208985015, guid: b6f59584f248a864dadf6d6eee213f82, type: 3}
+  combocounter: {fileID: 1406467913310592804, guid: d0713db26dc9689429427b63989b08d6, type: 3}
+  Currentcombo: {fileID: 0}
+  Maxcombo: {fileID: 0}

@@ -462,7 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleImage: {fileID: 101590779}
-  howtoImage: {fileID: 101590779}
+  howtoImage: {fileID: 57593549}
 --- !u!114 &2035613334
 MonoBehaviour:
   m_ObjectHideFlags: 0

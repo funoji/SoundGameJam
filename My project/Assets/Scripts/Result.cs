@@ -21,5 +21,10 @@ public class Result : MonoBehaviour
         {
             SceneManager.LoadScene("Title");
         }
+
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();//ゲームプレイ終了
+        }
     }
 }

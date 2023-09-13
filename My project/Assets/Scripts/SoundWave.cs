@@ -25,7 +25,7 @@ public class SoundWave : MonoBehaviour
 
     private Transform[] visualList;
     private float[] visualScale;
-    private int amnVisual = 16;
+    private int amnVisual = 25;
     // Start is called before the first frame update
     void Start()
     {
