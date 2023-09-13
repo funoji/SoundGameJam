@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 06ce00fb448bc4b4ba0348266886eb04
   - enabled: 1
+    path: Assets/Scenes/SampleNotes.unity
+    guid: e37d4056b10a9df4c9f3dba416efd894
+  - enabled: 1
     path: Assets/Scenes/result.unity
     guid: 3cdb23415b9c3ee4fb620ee3b1abbf38
   m_configObjects: {}

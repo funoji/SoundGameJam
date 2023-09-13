@@ -53,7 +53,7 @@ public class BallToPlayer : MonoBehaviour
         
         if(bgmTime >= 3.3 && bgmTime < 29.4)
         {
-            if (0.777f/*0.139f*/ <= soundTime1)
+            if (0.177f/*0.139f*/ <= soundTime1)
             {
                 soundTime1 = 0.0f;
                 //Debug.Log(currentTime);
