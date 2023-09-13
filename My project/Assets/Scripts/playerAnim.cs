@@ -8,6 +8,10 @@ public class playerAnim : MonoBehaviour
 {
     Animator animator;
 
+    PlayerScript PlayerScript;
+    private bool setgra = false;
+    private bool canJump = true;
+    [SerializeField] float jumpCooldown;
 
     public float span = 1f;
     private float currentTime = 0f;
@@ -21,9 +25,16 @@ public class playerAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             animator.SetTrigger("Jump");
+            canJump = false;
+            StartCoroutine(JumpCooldown());
         }
+    }
+    IEnumerator JumpCooldown()
+    {
+        yield return new WaitForSeconds(jumpCooldown);
+        canJump = true;
     }
 }
