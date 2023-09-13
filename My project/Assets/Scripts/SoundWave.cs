@@ -14,20 +14,22 @@ public class SoundWave : MonoBehaviour
     public float visualModfier = 50.0f;
     public float smoothSpeed = 10.0f;
     public float keepPercentage = 0.5f;
+    [SerializeField]GameObject[] gameObjects;
+    [SerializeField] GameObject strpos;
 
 
-    private AudioSource source;
+    [SerializeField]private AudioSource source;
     private float[] samples;
     private float[] spectrum;
     private float sampeRate;
 
     private Transform[] visualList;
     private float[] visualScale;
-    private int amnVisual = 64;
+    private int amnVisual = 16;
     // Start is called before the first frame update
     void Start()
     {
-        source = GetComponent<AudioSource>();
+        //source = GetComponent<AudioSource>();
         samples = new float[1024];
         spectrum = new float[1024];
         sampeRate = AudioSettings.outputSampleRate;
@@ -37,15 +39,19 @@ public class SoundWave : MonoBehaviour
     {
         visualScale = new float[amnVisual];
         visualList = new Transform[amnVisual];
+        int j = 0;
 
-        for(int i = 0; i< amnVisual; i++)
+        for (int i = 0; i < amnVisual; i++)
         {
-            GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube) as GameObject;
+            if (j == gameObjects.Length) j = 0;
+            GameObject go = GameObject.Instantiate(gameObjects[j], strpos.transform.position, Quaternion.identity); // ‚±‚±‚ð•ÏX
+            go.transform.SetParent(transform, false);
             visualList[i] = go.transform;
-            visualList[i].position = Vector3.right * i;
+            visualList[i].position = strpos.transform.position + Vector3.right * i;
+            j++;
         }
     }
-    
+
     // Update is called once per frame
     void Update()
     {
